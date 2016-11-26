@@ -1,0 +1,66 @@
+.cv-header {
+  margin-top: 15px;
+
+  .flex-container {
+    .display(flex);
+    .align-items(center);
+
+    .photo {
+      .size(60px);
+      background-size: contain;
+      background-repeat: no-repeat;
+      border-radius: 50%;
+      background-image: url('img/photo.jpeg');
+    }
+
+    .name-wrapper {
+      .display(flex);
+      .align-items(center);
+      .flex-direction(column);
+      margin-left: 10px;
+
+      .name {
+        .align-self(flex-start);
+        font-size: 25px;
+        color: #fff;
+        font-weight: 100;
+        letter-spacing: 1.5px;
+      }
+
+      .title {
+        .align-self(flex-start);
+        color: #ffc252;
+        letter-spacing: 1px;
+        font-weight: 200;
+      }
+    }
+
+    .save {
+      .flex(1);
+      .display(flex);
+      .justify-content(flex-end);
+
+      .btn.print {
+        border: none;
+        border-radius: 1px;
+        overflow: hidden;
+
+        .text {
+          display: inline-block;
+          margin-left: 0;
+          width: 0;
+          opacity: 0;
+          transition: all ease 0.5s;
+        }
+
+        &:hover {
+          .text {
+            margin-left: 10px;
+            width: 70px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
