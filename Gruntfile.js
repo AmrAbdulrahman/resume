@@ -38,7 +38,7 @@ module.exports = function(grunt) {
           //compress: true,
         },
         files: {
-          'build/app.css': 'src/index.less',
+          'build/css/app.css': 'src/styles/index.less',
         },
       },
     },
