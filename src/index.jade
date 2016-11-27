@@ -3,9 +3,9 @@ html(lang='en' ng-app='cvApp')
   head
     title Amr Abdulrahman
     link(rel='stylesheet' href='css/app.css')
-    link(rel='icon' href='/img/cv.png' type='image/x-icon')
-  body(ng-controller='CVCtrl')
-    .container-fluid
+    link(rel='icon' href='img/cv.png' type='image/x-icon')
+  body(ng-controller='AppCtrl')
+    #non-printable.container-fluid
       // header
       header
       
@@ -16,6 +16,12 @@ html(lang='en' ng-app='cvApp')
             contacts
             education
 
+    #printable
+      .container-fluid
+        header
+        contacts
+        education
+          
     script(type='text/javascript' src='app.js')
     script(type='text/javascript' src='//localhost:35729/livereload.js')
-    
+    iframe(name='print_frame' width='0' height='0' frameborder='0' src='about:blank')

@@ -9170,6 +9170,42 @@ button.close {
   overflow: visible;
   clip: auto;
 }
+#printable {
+  display: none;
+}
+@media print {
+  #non-printable {
+    display: none;
+  }
+  #printable {
+    display: block;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  .cv-header {
+    margin-bottom: 30px;
+  }
+  .cv-header .title {
+    color: #d29424 !important;
+    font-weight: 200;
+  }
+  .cv-header .flex-container .photo,
+  .cv-header .flex-container .save {
+    display: none !important;
+  }
+  .separator {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .row.section .title {
+    direction: ltr !important;
+    margin-bottom: 10px;
+  }
+  .row.section .content {
+    border-left: none !important;
+  }
+}
 body {
   background-image: url('../img/tweed.png');
 }
@@ -9212,8 +9248,7 @@ body {
   font-style: italic;
 }
 .separator {
-  height: 1px;
-  background-color: #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
 }
 .cv-header {
   margin-top: 15px;

@@ -1,0 +1,43 @@
+#printable { display: none; }
+
+@media print {
+  #non-printable { display: none; }
+  #printable { display: block; }
+
+  // fix: http://stackoverflow.com/questions/7301989/need-to-remove-href-values-when-printing-in-chrome
+  a[href]:after {
+    content: none !important;
+  }
+
+  .cv-header {
+    margin-bottom: 30px;
+
+    .title {
+      color: #d29424 !important;
+      font-weight: 200;
+    }
+
+    // hide photo and print button
+    .flex-container .photo,
+    .flex-container .save {
+      display: none !important;
+    }
+  }
+
+  .separator {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  // section titles
+  .row.section {
+    .title {
+      direction: ltr !important;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      border-left: none !important;
+    }
+  }
+}
