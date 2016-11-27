@@ -1,5 +1,5 @@
-import CVCtrl from './controllers/cv.controller';
+import AppCtrl from './app.controller';
 
 angular
   .module('app.controllers', [])
-  .controller('CVCtrl', CVCtrl);
+  .controller('AppCtrl', AppCtrl);

@@ -1,0 +1,13 @@
+#printable { display: none; }
+
+@media print {
+  #non-printable { display: none; }
+  #printable { display: block; }
+}
+
+// fix: http://stackoverflow.com/questions/7301989/need-to-remove-href-values-when-printing-in-chrome
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}

@@ -49457,17 +49457,26 @@ module.exports = angular;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = AppController;
+function AppController($scope) {};
+
+},{}],5:[function(require,module,exports){
 'use strict';
 
-var _cv = require('./controllers/cv.controller');
+var _app = require('./app.controller');
 
-var _cv2 = _interopRequireDefault(_cv);
+var _app2 = _interopRequireDefault(_app);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-angular.module('app.controllers', []).controller('CVCtrl', _cv2.default);
+angular.module('app.controllers', []).controller('AppCtrl', _app2.default);
 
-},{"./controllers/cv.controller":6}],5:[function(require,module,exports){
+},{"./app.controller":4}],6:[function(require,module,exports){
 'use strict';
 
 var _contacts = require('./directives/contacts/contacts.directive');
@@ -49486,36 +49495,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 angular.module('app.directives', []).directive('contacts', _contacts2.default).directive('header', _header2.default).directive('education', _education2.default);
 
-},{"./directives/contacts/contacts.directive":7,"./directives/education/education.directive":8,"./directives/header/header.directive":9}],6:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = CVController;
-function CVController($scope) {
-  $scope.contacts = [{
-    title: 'Cell',
-    value: '(+20) 12 2886 8227'
-  }, {
-    title: 'Skype',
-    value: 'amr.mohammed.abdulrahman'
-  }, {
-    title: 'Email',
-    value: 'amr.abdurahman@gmail.com'
-  }, {
-    title: 'Github',
-    value: 'github/AmrAbdulrahman'
-  }, {
-    title: 'LinkedIn',
-    value: 'Amr Abdulrahman'
-  }, {
-    title: 'Website',
-    value: 'amrabdulrahman.com'
-  }];
-};
-
-},{}],7:[function(require,module,exports){
+},{"./directives/contacts/contacts.directive":7,"./directives/education/education.directive":8,"./directives/header/header.directive":9}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49584,7 +49564,17 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function () {
   return {
-    templateUrl: 'app/directives/header/header.view.html'
+    templateUrl: 'app/directives/header/header.view.html',
+    link: function link(scope) {
+      scope.print = function () {
+        // so many solutions out there to solve the problem of "printing part of the page"
+        // and this one, is the most neat one, from my POV
+        // it doesn't play around HTML, doesn't create, remove, recreates DOM
+        // we simply have 'printable' area in the page
+        // and play around that with pure CSS
+        window.print();
+      };
+    }
   };
 };
 
@@ -49611,4 +49601,4 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 _angular2.default.module('cvApp', ['app.controllers', 'app.directives']);
 
-},{"./app/app.controllers":4,"./app/app.directives":5,"angular":2,"lodash":3}]},{},[10]);
+},{"./app/app.controllers":5,"./app/app.directives":6,"angular":2,"lodash":3}]},{},[10]);

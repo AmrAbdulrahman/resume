@@ -9170,6 +9170,22 @@ button.close {
   overflow: visible;
   clip: auto;
 }
+#printable {
+  display: none;
+}
+@media print {
+  #non-printable {
+    display: none;
+  }
+  #printable {
+    display: block;
+  }
+}
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}
 body {
   background-image: url('../img/tweed.png');
 }
