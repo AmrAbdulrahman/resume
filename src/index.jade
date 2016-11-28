@@ -6,12 +6,13 @@ html(lang='en' ng-app='cvApp')
     link(rel='icon' href='img/cv.png' type='image/x-icon')
     meta(name='viewport' content='width=device-width, initial-scale=1')
 
-  body(ng-controller='AppCtrl')
-    // web layout
+  body#app-wrapper.app-wrapper(ng-controller='AppCtrl')
+    // web layout    
     #non-printable.container-fluid
       // header
-      header
-      
+      header.sticky-header
+      .header-space
+
       // body
       .row.body
         .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2.cv-wrapper.no-padding

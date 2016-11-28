@@ -9172,6 +9172,7 @@ button.close {
 }
 body {
   background-image: url('../img/tweed.png');
+  background-attachment: fixed;
 }
 .cv-wrapper {
   min-height: calc(100vh - 60px);
@@ -9255,7 +9256,8 @@ ul.main {
   border-bottom: 1px solid #d6d6d6;
 }
 .cv-header {
-  margin-top: 15px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .cv-header .flex-container {
   display: -webkit-box;
@@ -9276,6 +9278,7 @@ ul.main {
   background-repeat: no-repeat;
   border-radius: 50%;
   background-image: url('../img/photo.jpeg');
+  transition: all ease 0.2s;
 }
 .cv-header .flex-container .name-wrapper {
   display: -webkit-box;
@@ -9305,6 +9308,7 @@ ul.main {
   color: #fff;
   font-weight: 100;
   letter-spacing: 1.5px;
+  transition: all ease 0.2s;
 }
 .cv-header .flex-container .name-wrapper .title {
   -webkit-align-self: flex-start;
@@ -9313,6 +9317,8 @@ ul.main {
   color: #ffc252;
   letter-spacing: 1px;
   font-weight: 200;
+  font-size: 14px;
+  transition: all ease 0.2s;
 }
 .cv-header .flex-container .save {
   -webkit-box-flex: 1;
@@ -9461,4 +9467,40 @@ li.projects > ul {
   .row.section .content {
     border-left: none !important;
   }
+}
+.app-wrapper {
+  overflow: auto;
+  position: relative;
+}
+.app-wrapper .sticky-header {
+  background-image: url('../img/tweed.png');
+  background-attachment: fixed;
+  position: absolute;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  margin-left: -7px;
+  margin-right: -7px;
+  z-index: 1000000;
+}
+.app-wrapper.fixed-header .sticky-header {
+  position: fixed;
+  padding: 5px 0;
+  top: 0;
+}
+.app-wrapper.fixed-header .sticky-header .photo {
+  width: 40px;
+  height: 40px;
+}
+.app-wrapper.fixed-header .sticky-header .name {
+  font-size: 20px;
+}
+.app-wrapper.fixed-header .sticky-header .title {
+  font-size: 12px;
+}
+.header-space {
+  height: 100px;
+  padding-top: 40px;
 }
