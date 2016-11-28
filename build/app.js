@@ -49499,11 +49499,19 @@ var _cvBody = require('./directives/cv-body/cv-body.directive');
 
 var _cvBody2 = _interopRequireDefault(_cvBody);
 
+var _technicalSkills = require('./directives/technical-skills/technical-skills.directive');
+
+var _technicalSkills2 = _interopRequireDefault(_technicalSkills);
+
+var _sectionTitle = require('./directives/section-title/section-title.directive');
+
+var _sectionTitle2 = _interopRequireDefault(_sectionTitle);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-angular.module('app.directives', []).directive('header', _header2.default).directive('cvBody', _cvBody2.default).directive('contacts', _contacts2.default).directive('education', _education2.default).directive('experience', _experience2.default);
+angular.module('app.directives', []).directive('header', _header2.default).directive('cvBody', _cvBody2.default).directive('contacts', _contacts2.default).directive('education', _education2.default).directive('experience', _experience2.default).directive('technicalSkills', _technicalSkills2.default).directive('sectionTitle', _sectionTitle2.default);
 
-},{"./directives/contacts/contacts.directive":7,"./directives/cv-body/cv-body.directive":8,"./directives/education/education.directive":9,"./directives/experience/experience.directive":10,"./directives/header/header.directive":11}],7:[function(require,module,exports){
+},{"./directives/contacts/contacts.directive":7,"./directives/cv-body/cv-body.directive":8,"./directives/education/education.directive":9,"./directives/experience/experience.directive":10,"./directives/header/header.directive":11,"./directives/section-title/section-title.directive":12,"./directives/technical-skills/technical-skills.directive":13}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49519,7 +49527,7 @@ exports.default = function () {
         title: 'Cell',
         value: '(+20) 12 2886 8227'
       }, {
-        type: 'text',
+        type: 'phone',
         title: 'Skype',
         value: 'amr.mohammed.abdulrahman'
       }, {
@@ -49621,6 +49629,41 @@ exports.default = function () {
 },{}],12:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return {
+    templateUrl: 'app/directives/section-title/section-title.view.html',
+    replace: true,
+    scope: {
+      title: '@',
+      iconClass: '@'
+    }
+  };
+};
+
+;
+
+},{}],13:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return {
+    templateUrl: 'app/directives/technical-skills/technical-skills.view.html'
+  };
+};
+
+;
+
+},{}],14:[function(require,module,exports){
+'use strict';
+
 var _lodash = require('lodash');
 
 var _ = _interopRequireWildcard(_lodash);
@@ -49639,4 +49682,4 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 _angular2.default.module('cvApp', ['app.controllers', 'app.directives']);
 
-},{"./app/app.controllers":5,"./app/app.directives":6,"angular":2,"lodash":3}]},{},[12]);
+},{"./app/app.controllers":5,"./app/app.directives":6,"angular":2,"lodash":3}]},{},[14]);

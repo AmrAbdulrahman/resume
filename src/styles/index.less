@@ -32,9 +32,35 @@ body {
     font-weight: 200;
     margin-bottom: 5px;
 
-    &::first-letter {
-      color: black;
-      font-weight: 500;
+    span.title-wrapper {
+      width: 100%;
+    }
+
+    i {
+      margin-right: 5px;
+      color: #396277;
+
+      &.experience {
+        margin-right: 8px;
+      }
+
+      &.center {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    span.title {
+      display: inline-block;
+
+      &.text-center {
+        width: 100%;
+      }
+
+      &::first-letter {
+        color: black;
+        font-weight: 500;
+      }
     }
   }
 
@@ -56,36 +82,12 @@ body {
   font-style: italic;
 }
 
-.project {
-  .header {
-    font-weight: bold;
-    color: black;
-  }
-
-  .description {
-    color: #a2a2a2;
-  }
-
-  .frameworks {
-    color: #d8a64c;
-  }
-}
-
 ul.main {
   margin-bottom: 0;
   padding-left: 15px;
 }
 
-li.company {
-  border-top: 1px dotted #dedede;
-  padding-top: 7px;
-
-  &:first-child {
-    border-top: none;
-  }
-}
-
-li.projects {
+.sublist {
   list-style: none;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -107,4 +109,5 @@ li.projects {
 @import "../app/directives/contacts/contacts.styles.less";
 @import "../app/directives/education/education.styles.less";
 @import "../app/directives/experience/experience.styles.less";
+@import "../app/directives/technical-skills/technical-skills.styles.less";
 @import "./print.less";

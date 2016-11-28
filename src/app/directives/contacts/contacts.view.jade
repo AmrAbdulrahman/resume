@@ -1,8 +1,8 @@
 .row.contacts
-  .contact.col-xs-6(ng-repeat="contact in contacts")
-    p.title(ng-bind="contact.title")
+  .contact.col-xs-12.col-sm-6(ng-repeat="contact in contacts")
+    span.title(ng-bind="contact.title")
     
-    p.value(ng-bind="contact.value" ng-show="contact.type === 'text'")
+    span.value(ng-bind="contact.value" ng-show="contact.type === 'text'")
     a.value(ng-bind="contact.value" ng-show="contact.type === 'link'" href="{{contact.url}}")
     a.value(ng-bind="contact.value" ng-show="contact.type === 'phone'" href="tel:{{contact.value}}")
     a.value(ng-bind="contact.value" ng-show="contact.type === 'email'" href="mailto:{{contact.value}}")

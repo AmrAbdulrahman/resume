@@ -9199,7 +9199,27 @@ body {
   font-weight: 200;
   margin-bottom: 5px;
 }
-.row.section .section-title::first-letter {
+.row.section .section-title span.title-wrapper {
+  width: 100%;
+}
+.row.section .section-title i {
+  margin-right: 5px;
+  color: #396277;
+}
+.row.section .section-title i.experience {
+  margin-right: 8px;
+}
+.row.section .section-title i.center {
+  display: block;
+  text-align: center;
+}
+.row.section .section-title span.title {
+  display: inline-block;
+}
+.row.section .section-title span.title.text-center {
+  width: 100%;
+}
+.row.section .section-title span.title::first-letter {
   color: black;
   font-weight: 500;
 }
@@ -9216,36 +9236,19 @@ body {
 .italic {
   font-style: italic;
 }
-.project .header {
-  font-weight: bold;
-  color: black;
-}
-.project .description {
-  color: #a2a2a2;
-}
-.project .frameworks {
-  color: #d8a64c;
-}
 ul.main {
   margin-bottom: 0;
   padding-left: 15px;
 }
-li.company {
-  border-top: 1px dotted #dedede;
-  padding-top: 7px;
-}
-li.company:first-child {
-  border-top: none;
-}
-li.projects {
+.sublist {
   list-style: none;
   margin-top: 7px;
   margin-bottom: 7px;
 }
-li.projects li {
+.sublist li {
   list-style-type: circle;
 }
-li.projects > ul {
+.sublist > ul {
   padding-left: 35px;
 }
 .separator {
@@ -9348,8 +9351,23 @@ li.projects > ul {
 .row.contacts {
   margin-bottom: 10px;
 }
+.contact {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
 .contact .title {
-  min-width: 70px;
+  width: 70px;
   color: gray;
   display: inline-block;
   margin-right: 10px;
@@ -9360,9 +9378,46 @@ li.projects > ul {
 }
 .contact .value {
   display: inline-block;
+  width: calc(100% - 80px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .contact p {
   margin-bottom: 3px;
+}
+.project .header {
+  font-weight: bold;
+  color: black;
+}
+.project .description {
+  color: #a2a2a2;
+}
+.project .frameworks {
+  color: #d8a64c;
+}
+li.company {
+  border-top: 1px dotted #dedede;
+  padding-top: 7px;
+}
+li.company:first-child {
+  border-top: none;
+}
+li.projects {
+  list-style: none;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+li.projects li {
+  list-style-type: circle;
+}
+li.projects > ul {
+  padding-left: 35px;
+}
+.row.technical-skills .list-title {
+  color: #4c4c4c;
+  font-weight: 600;
+  font-size: 17px;
 }
 #printable {
   display: none;
