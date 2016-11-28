@@ -9195,8 +9195,9 @@ body {
 .row.section .section-title {
   display: inline-block;
   color: gray;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 200;
+  margin-bottom: 5px;
 }
 .row.section .section-title::first-letter {
   color: black;
