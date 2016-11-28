@@ -1,7 +1,6 @@
 @import (less) "../../node_modules/bootstrap/dist/css/bootstrap.css";
 @import (less) "../../node_modules/font-awesome/css/font-awesome.min.css";
 @import "../../node_modules/lesshat/lesshat.less";
-@import "./print.less";
 
 body {
   background-image: url('../img/tweed.png');
@@ -16,12 +15,17 @@ body {
   .box-shadow(0px 1px 5px black);
 }
 
+.row.body,
+.row.header {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .row.section {
   padding-top: 10px;
   padding-bottom: 10px;
 
-  .title {
-    direction: rtl;
+  .section-title {
     display: inline-block;
     color: gray;
     font-size: 18px;
@@ -51,6 +55,49 @@ body {
   font-style: italic;
 }
 
+.project {
+  .header {
+    font-weight: bold;
+    color: black;
+  }
+
+  .description {
+    color: #a2a2a2;
+  }
+
+  .frameworks {
+    color: #d8a64c;
+  }
+}
+
+ul.main {
+  margin-bottom: 0;
+  padding-left: 15px;
+}
+
+li.company {
+  border-top: 1px dotted #dedede;
+  padding-top: 7px;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+li.projects {
+  list-style: none;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  li {
+    list-style-type: circle;
+  }
+
+  & > ul {
+    padding-left: 35px;
+  }
+}
+
 .separator {
   border-bottom: 1px solid #d6d6d6;
 }
@@ -58,3 +105,5 @@ body {
 @import "../app/directives/header/header.styles.less";
 @import "../app/directives/contacts/contacts.styles.less";
 @import "../app/directives/education/education.styles.less";
+@import "../app/directives/experience/experience.styles.less";
+@import "./print.less";

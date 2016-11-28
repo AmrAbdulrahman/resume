@@ -9170,42 +9170,6 @@ button.close {
   overflow: visible;
   clip: auto;
 }
-#printable {
-  display: none;
-}
-@media print {
-  #non-printable {
-    display: none;
-  }
-  #printable {
-    display: block;
-  }
-  a[href]:after {
-    content: none !important;
-  }
-  .cv-header {
-    margin-bottom: 30px;
-  }
-  .cv-header .title {
-    color: #d29424 !important;
-    font-weight: 200;
-  }
-  .cv-header .flex-container .photo,
-  .cv-header .flex-container .save {
-    display: none !important;
-  }
-  .separator {
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-  .row.section .title {
-    direction: ltr !important;
-    margin-bottom: 10px;
-  }
-  .row.section .content {
-    border-left: none !important;
-  }
-}
 body {
   background-image: url('../img/tweed.png');
 }
@@ -9219,18 +9183,22 @@ body {
   -moz-box-shadow: 0px 1px 5px black;
   box-shadow: 0px 1px 5px black;
 }
+.row.body,
+.row.header {
+  margin-left: 0;
+  margin-right: 0;
+}
 .row.section {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.row.section .title {
-  direction: rtl;
+.row.section .section-title {
   display: inline-block;
   color: gray;
   font-size: 18px;
   font-weight: 300;
 }
-.row.section .title::first-letter {
+.row.section .section-title::first-letter {
   color: black;
   font-weight: 500;
 }
@@ -9246,6 +9214,38 @@ body {
 }
 .italic {
   font-style: italic;
+}
+.project .header {
+  font-weight: bold;
+  color: black;
+}
+.project .description {
+  color: #a2a2a2;
+}
+.project .frameworks {
+  color: #d8a64c;
+}
+ul.main {
+  margin-bottom: 0;
+  padding-left: 15px;
+}
+li.company {
+  border-top: 1px dotted #dedede;
+  padding-top: 7px;
+}
+li.company:first-child {
+  border-top: none;
+}
+li.projects {
+  list-style: none;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+li.projects li {
+  list-style-type: circle;
+}
+li.projects > ul {
+  padding-left: 35px;
 }
 .separator {
   border-bottom: 1px solid #d6d6d6;
@@ -9363,7 +9363,46 @@ body {
 .contact p {
   margin-bottom: 3px;
 }
-.section.education ul {
-  margin-bottom: 0;
-  padding-left: 15px;
+#printable {
+  display: none;
+}
+@media print {
+  #non-printable {
+    display: none;
+  }
+  #printable {
+    display: block;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  .cv-header {
+    margin-bottom: 30px;
+  }
+  .cv-header .name {
+    font-weight: 200 !important;
+  }
+  .cv-header .title {
+    color: #d29424 !important;
+    font-weight: 200 !important;
+  }
+  .cv-header .flex-container .photo,
+  .cv-header .flex-container .save {
+    display: none !important;
+  }
+  .separator {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .row.header {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .row.section .title {
+    direction: ltr !important;
+    margin-bottom: 10px;
+  }
+  .row.section .content {
+    border-left: none !important;
+  }
 }

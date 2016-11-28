@@ -49491,11 +49491,19 @@ var _education = require('./directives/education/education.directive');
 
 var _education2 = _interopRequireDefault(_education);
 
+var _experience = require('./directives/experience/experience.directive');
+
+var _experience2 = _interopRequireDefault(_experience);
+
+var _cvBody = require('./directives/cv-body/cv-body.directive');
+
+var _cvBody2 = _interopRequireDefault(_cvBody);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-angular.module('app.directives', []).directive('contacts', _contacts2.default).directive('header', _header2.default).directive('education', _education2.default);
+angular.module('app.directives', []).directive('header', _header2.default).directive('cvBody', _cvBody2.default).directive('contacts', _contacts2.default).directive('education', _education2.default).directive('experience', _experience2.default);
 
-},{"./directives/contacts/contacts.directive":7,"./directives/education/education.directive":8,"./directives/header/header.directive":9}],7:[function(require,module,exports){
+},{"./directives/contacts/contacts.directive":7,"./directives/cv-body/cv-body.directive":8,"./directives/education/education.directive":9,"./directives/experience/experience.directive":10,"./directives/header/header.directive":11}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49549,13 +49557,43 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = function () {
   return {
-    templateUrl: 'app/directives/education/education.view.html'
+    templateUrl: 'app/directives/cv-body/cv-body.view.html'
   };
 };
 
 ;
 
 },{}],9:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return {
+    templateUrl: 'app/directives/education/education.view.html'
+  };
+};
+
+;
+
+},{}],10:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  return {
+    templateUrl: 'app/directives/experience/experience.view.html'
+  };
+};
+
+;
+
+},{}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -49580,7 +49618,7 @@ exports.default = function () {
 
 ;
 
-},{}],10:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 var _lodash = require('lodash');
@@ -49601,4 +49639,4 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 _angular2.default.module('cvApp', ['app.controllers', 'app.directives']);
 
-},{"./app/app.controllers":5,"./app/app.directives":6,"angular":2,"lodash":3}]},{},[10]);
+},{"./app/app.controllers":5,"./app/app.directives":6,"angular":2,"lodash":3}]},{},[12]);
