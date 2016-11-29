@@ -59842,6 +59842,15 @@ exports.default = function () {
         // and play around that with pure CSS
         window.print();
       };
+
+      scope.share = function () {
+        window.FB.ui({
+          method: 'share',
+          href: 'https://amrabdulrahman.github.io/resume/build/'
+        }, function (response) {
+          console.log(response);
+        });
+      };
     }
   };
 };
@@ -59907,6 +59916,28 @@ window.$ = window.jQuery = require('jquery');
 
 _angular2.default.module('cvApp', ['app.controllers', 'app.directives']);
 
+// FB share
+window.fbAsyncInit = function () {
+  FB.init({
+    appId: '1747088575543985',
+    xfbml: true,
+    version: 'v2.8'
+  });
+  FB.AppEvents.logPageView();
+};
+
+(function (d, s, id) {
+  var js,
+      fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {
+    return;
+  }
+  js = d.createElement(s);js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, 'script', 'facebook-jssdk');
+
+// sticky header
 $(document).ready(function () {
   var appWrapper = $('#app-wrapper');
 

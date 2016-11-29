@@ -10,6 +10,15 @@ export default function() {
         // and play around that with pure CSS
         window.print();
       };
+
+      scope.share = () => {
+        window.FB.ui({
+          method: 'share',
+          href: 'https://amrabdulrahman.github.io/resume/build/'
+        }, (response) => {
+          console.log(response);
+        });
+      };
     }
   };
 };

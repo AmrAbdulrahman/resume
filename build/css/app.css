@@ -9337,19 +9337,23 @@ ul.main {
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
-.cv-header .flex-container .save .btn.print {
+.cv-header .flex-container .save .btn.print,
+.cv-header .flex-container .save .btn.share {
   border: none;
   border-radius: 1px;
   overflow: hidden;
+  margin-left: 5px;
 }
-.cv-header .flex-container .save .btn.print .text {
+.cv-header .flex-container .save .btn.print .text,
+.cv-header .flex-container .save .btn.share .text {
   display: inline-block;
   margin-left: 0;
   width: 0;
   opacity: 0;
   transition: all ease 0.5s;
 }
-.cv-header .flex-container .save .btn.print:hover .text {
+.cv-header .flex-container .save .btn.print:hover .text,
+.cv-header .flex-container .save .btn.share:hover .text {
   margin-left: 10px;
   width: 70px;
   opacity: 1;
