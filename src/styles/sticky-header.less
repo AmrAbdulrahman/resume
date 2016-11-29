@@ -3,8 +3,6 @@
   position: relative;
 
   .sticky-header {
-    background-image: url('../img/tweed.png');
-    background-attachment: fixed;
     position: absolute;
     padding-top: 25px;
     padding-bottom: 20px;
@@ -14,6 +12,19 @@
     margin-left: -7px;
     margin-right: -7px;
     z-index: 1000000;
+
+    &::after {
+      content: "";
+      background-image: url('../img/tweed.png');
+      background-attachment: fixed;
+      opacity: 0.9;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+    }
   }
 
   &.fixed-header .sticky-header {

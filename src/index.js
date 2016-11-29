@@ -15,7 +15,7 @@ $(document).ready(() => {
   $(window).on('scroll', () => {
     var scrollTop = $(window).scrollTop();
 
-    if (scrollTop > 15) {
+    if (scrollTop > 20) {
       appWrapper.addClass('fixed-header');
     } else {
       appWrapper.removeClass('fixed-header');
