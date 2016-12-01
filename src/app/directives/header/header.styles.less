@@ -40,13 +40,15 @@
       }
     }
 
-    .save {
+    .actions {
       .flex(1);
       .display(flex);
       .justify-content(flex-end);
+      transition: all ease 0.2s;
 
       .btn.print,
-      .btn.share {
+      .btn.share,
+      .btn.refer {
         border: none;
         border-radius: 1px;
         overflow: hidden;
@@ -57,15 +59,18 @@
           margin-left: 0;
           width: 0;
           opacity: 0;
-          transition: all ease 0.5s;
+          transition: all ease 0.7s;
+          transition-delay: 0.1s;
         }
 
-        &:hover {
-          .text {
-            margin-left: 10px;
-            width: 70px;
-            opacity: 1;
-          }
+        &:hover .text {
+          margin-left: 10px;
+          width: 70px;
+          opacity: 1;
+        }
+
+        &.refer:hover .text {
+          width: 90px;
         }
       }
     }

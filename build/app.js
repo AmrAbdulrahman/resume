@@ -59851,6 +59851,16 @@ exports.default = function () {
           console.log(response);
         });
       };
+
+      scope.refer = function () {
+        var subject = 'Amr Abdulrahman Resume | Frontend Engineer';
+        var body = '\n          Hello,\n\n          Please find below the link for Amr\'s CV:\n          https://amrabdulrahman.github.io/resume/build/\n\n          Regards!\n        ';
+
+        $('a.refer').attr('href', 'mailto:someone@something.com?subject=' + subject + '&body=' + body);
+        $('a.refer').click();
+
+        //window.open(`mailto:someone@something.com?subject=${subject}&body=${body}`);
+      };
     }
   };
 };

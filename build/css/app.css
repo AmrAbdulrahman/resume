@@ -9176,10 +9176,11 @@ body {
 }
 .cv-wrapper {
   min-height: calc(100vh - 60px);
-  background-color: #fff;
+  background-color: #f7f7f7;
   margin-top: 15px;
   margin-bottom: 30px;
   padding-top: 15px;
+  transition: all ease 0.2s;
   -webkit-box-shadow: 0px 1px 5px black;
   -moz-box-shadow: 0px 1px 5px black;
   box-shadow: 0px 1px 5px black;
@@ -9320,7 +9321,7 @@ ul.main {
   font-size: 14px;
   transition: all ease 0.2s;
 }
-.cv-header .flex-container .save {
+.cv-header .flex-container .actions {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -webkit-flex: 1;
@@ -9336,27 +9337,37 @@ ul.main {
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
+  transition: all ease 0.2s;
 }
-.cv-header .flex-container .save .btn.print,
-.cv-header .flex-container .save .btn.share {
+.cv-header .flex-container .actions .btn.print,
+.cv-header .flex-container .actions .btn.share,
+.cv-header .flex-container .actions .btn.refer {
   border: none;
   border-radius: 1px;
   overflow: hidden;
   margin-left: 5px;
 }
-.cv-header .flex-container .save .btn.print .text,
-.cv-header .flex-container .save .btn.share .text {
+.cv-header .flex-container .actions .btn.print .text,
+.cv-header .flex-container .actions .btn.share .text,
+.cv-header .flex-container .actions .btn.refer .text {
   display: inline-block;
   margin-left: 0;
   width: 0;
   opacity: 0;
-  transition: all ease 0.5s;
+  transition: all ease 0.7s;
+  transition-delay: 0.1s;
 }
-.cv-header .flex-container .save .btn.print:hover .text,
-.cv-header .flex-container .save .btn.share:hover .text {
+.cv-header .flex-container .actions .btn.print:hover .text,
+.cv-header .flex-container .actions .btn.share:hover .text,
+.cv-header .flex-container .actions .btn.refer:hover .text {
   margin-left: 10px;
   width: 70px;
   opacity: 1;
+}
+.cv-header .flex-container .actions .btn.print.refer:hover .text,
+.cv-header .flex-container .actions .btn.share.refer:hover .text,
+.cv-header .flex-container .actions .btn.refer.refer:hover .text {
+  width: 90px;
 }
 .row.contacts {
   margin-bottom: 10px;
@@ -9453,8 +9464,14 @@ li.projects > ul {
     font-weight: 200 !important;
   }
   .cv-header .flex-container .photo,
-  .cv-header .flex-container .save {
+  .cv-header .flex-container .actions {
     display: none !important;
+  }
+  .row.section {
+    page-break-inside: avoid;
+  }
+  .contact {
+    width: 50%;
   }
   .separator {
     margin-right: -15px;
@@ -9499,6 +9516,9 @@ li.projects > ul {
   position: absolute;
   z-index: -1;
 }
+.app-wrapper.fixed-header .cv-wrapper {
+  background-color: #fff;
+}
 .app-wrapper.fixed-header .sticky-header {
   position: fixed;
   padding: 5px 0;
@@ -9507,12 +9527,19 @@ li.projects > ul {
 .app-wrapper.fixed-header .sticky-header .photo {
   width: 40px;
   height: 40px;
+  margin-left: 5px;
 }
 .app-wrapper.fixed-header .sticky-header .name {
   font-size: 20px;
 }
 .app-wrapper.fixed-header .sticky-header .title {
   font-size: 12px;
+}
+.app-wrapper.fixed-header .sticky-header .actions {
+  margin-right: 8px;
+}
+.app-wrapper.fixed-header .sticky-header .actions .btn {
+  background-color: #d2d2d2;
 }
 .header-space {
   height: 100px;

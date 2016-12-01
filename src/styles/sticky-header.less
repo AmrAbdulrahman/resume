@@ -27,13 +27,18 @@
     }
   }
 
+  &.fixed-header .cv-wrapper {
+    background-color: #fff;
+  }
+
   &.fixed-header .sticky-header {
     position: fixed;
     padding: 5px 0;
     top: 0;
 
     .photo {
-      .size(40px)
+      .size(40px);
+      margin-left: 5px;
     }
 
     .name {
@@ -42,6 +47,14 @@
 
     .title {
       font-size: 12px;
+    }
+
+    .actions {
+      margin-right: 8px;
+
+      .btn {
+        background-color: #d2d2d2;
+      }
     }
   }
 }

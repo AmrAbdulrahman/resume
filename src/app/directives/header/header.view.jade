@@ -5,7 +5,11 @@
       .name-wrapper
         .name Amr Abdulrahman
         .title Frontend Engineer
-      .save
+      .actions
+        a.btn.btn-default.refer(href="mailto:someone@something.com?subject=Amr Abdulrahman Frontend Engineer&body=Hi,%0D%0A%0D%0APlease find below Amr's CV:%0D%0Ahttps://amrabdulrahman.github.io/resume/build/%0D%0A%0D%0ARegards")
+          i.fa.fa-envelope-o
+          span.text Refer by email
+          
         button.btn.btn-default.share(ng-click='share()')
           i.fa.fa-facebook-square
           span.text Share
