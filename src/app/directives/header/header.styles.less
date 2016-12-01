@@ -1,5 +1,6 @@
 .cv-header {
-  margin-top: 15px;
+  padding-left: 2px;
+  padding-right: 2px;
 
   .flex-container {
     .display(flex);
@@ -11,6 +12,7 @@
       background-repeat: no-repeat;
       border-radius: 50%;
       background-image: url('../img/photo.jpeg');
+      transition: all ease 0.2s;
     }
 
     .name-wrapper {
@@ -25,6 +27,7 @@
         color: #fff;
         font-weight: 100;
         letter-spacing: 1.5px;
+        transition: all ease 0.2s;
       }
 
       .title {
@@ -32,33 +35,42 @@
         color: #ffc252;
         letter-spacing: 1px;
         font-weight: 200;
+        font-size: 14px;
+        transition: all ease 0.2s;
       }
     }
 
-    .save {
+    .actions {
       .flex(1);
       .display(flex);
       .justify-content(flex-end);
+      transition: all ease 0.2s;
 
-      .btn.print {
+      .btn.print,
+      .btn.share,
+      .btn.refer {
         border: none;
         border-radius: 1px;
         overflow: hidden;
+        margin-left: 5px;
 
         .text {
           display: inline-block;
           margin-left: 0;
           width: 0;
           opacity: 0;
-          transition: all ease 0.5s;
+          transition: all ease 0.7s;
+          transition-delay: 0.1s;
         }
 
-        &:hover {
-          .text {
-            margin-left: 10px;
-            width: 70px;
-            opacity: 1;
-          }
+        &:hover .text {
+          margin-left: 10px;
+          width: 70px;
+          opacity: 1;
+        }
+
+        &.refer:hover .text {
+          width: 90px;
         }
       }
     }

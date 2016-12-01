@@ -3,8 +3,12 @@
 }
 
 .contact {
+  .display(flex);
+  .flex-direction(row);
+  margin-bottom: 5px;
+
   .title {
-    min-width: 70px;
+    width: 70px;
     color: gray;
     display: inline-block;
     margin-right: 10px;
@@ -17,6 +21,10 @@
 
   .value {
     display: inline-block;
+    width: ~"calc(100% - 80px)"; // title width + margin
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   p {

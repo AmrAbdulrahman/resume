@@ -1,35 +1,68 @@
 @import (less) "../../node_modules/bootstrap/dist/css/bootstrap.css";
 @import (less) "../../node_modules/font-awesome/css/font-awesome.min.css";
 @import "../../node_modules/lesshat/lesshat.less";
-@import "./print.less";
 
 body {
   background-image: url('../img/tweed.png');
+  background-attachment: fixed;
 }
 
 .cv-wrapper {
   min-height: ~"calc(100vh - 60px)";
-  background-color: #fff;
+  background-color: #f7f7f7;
   margin-top: 15px;
   margin-bottom: 30px;
   padding-top: 15px;
+  transition: all ease 0.2s;
   .box-shadow(0px 1px 5px black);
+}
+
+.row.body,
+.row.header {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .row.section {
   padding-top: 10px;
   padding-bottom: 10px;
 
-  .title {
-    direction: rtl;
+  .section-title {
     display: inline-block;
     color: gray;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 22px;
+    font-weight: 200;
+    margin-bottom: 5px;
 
-    &::first-letter {
-      color: black;
-      font-weight: 500;
+    span.title-wrapper {
+      width: 100%;
+    }
+
+    i {
+      margin-right: 5px;
+      color: #396277;
+
+      &.experience {
+        margin-right: 8px;
+      }
+
+      &.center {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    span.title {
+      display: inline-block;
+
+      &.text-center {
+        width: 100%;
+      }
+
+      &::first-letter {
+        color: black;
+        font-weight: 500;
+      }
     }
   }
 
@@ -51,6 +84,25 @@ body {
   font-style: italic;
 }
 
+ul.main {
+  margin-bottom: 0;
+  padding-left: 15px;
+}
+
+.sublist {
+  list-style: none;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  li {
+    list-style-type: circle;
+  }
+
+  & > ul {
+    padding-left: 35px;
+  }
+}
+
 .separator {
   border-bottom: 1px solid #d6d6d6;
 }
@@ -58,3 +110,7 @@ body {
 @import "../app/directives/header/header.styles.less";
 @import "../app/directives/contacts/contacts.styles.less";
 @import "../app/directives/education/education.styles.less";
+@import "../app/directives/experience/experience.styles.less";
+@import "../app/directives/technical-skills/technical-skills.styles.less";
+@import "./print.less";
+@import "./sticky-header.less";

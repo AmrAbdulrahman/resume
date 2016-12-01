@@ -4,23 +4,26 @@ html(lang='en' ng-app='cvApp')
     title Amr Abdulrahman
     link(rel='stylesheet' href='css/app.css')
     link(rel='icon' href='img/cv.png' type='image/x-icon')
-  body(ng-controller='AppCtrl')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+  body#app-wrapper.app-wrapper(ng-controller='AppCtrl')
+    // web layout    
     #non-printable.container-fluid
       // header
-      header
-      
+      header.sticky-header
+      .header-space
+
       // body
-      .row
+      .row.body
         .col-xs-12.col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2.cv-wrapper.no-padding
           .container-fluid
-            contacts
-            education
+            cv-body
 
+    // print layout
     #printable
       .container-fluid
         header
-        contacts
-        education
+        cv-body
           
     script(type='text/javascript' src='app.js')
     script(type='text/javascript' src='//localhost:35729/livereload.js')

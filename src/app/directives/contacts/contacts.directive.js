@@ -7,7 +7,7 @@ export default function() {
         title: 'Cell',
         value: '(+20) 12 2886 8227',
       }, {
-        type: 'text',
+        type: 'phone',
         title: 'Skype',
         value: 'amr.mohammed.abdulrahman',
       }, {

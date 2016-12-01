@@ -10,6 +10,32 @@ export default function() {
         // and play around that with pure CSS
         window.print();
       };
+
+      scope.share = () => {
+        window.FB.ui({
+          method: 'share',
+          href: 'https://amrabdulrahman.github.io/resume/build/'
+        }, (response) => {
+          console.log(response);
+        });
+      };
+
+      scope.refer = () => {
+        let subject = 'Amr Abdulrahman Resume | Frontend Engineer';
+        let body = `
+          Hello,
+
+          Please find below the link for Amr's CV:
+          https://amrabdulrahman.github.io/resume/build/
+
+          Regards!
+        `;
+
+        $('a.refer').attr('href', `mailto:someone@something.com?subject=${subject}&body=${body}`);
+        $('a.refer').click();
+
+        //window.open(`mailto:someone@something.com?subject=${subject}&body=${body}`);
+      };
     }
   };
 };
