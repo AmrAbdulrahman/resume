@@ -9541,6 +9541,9 @@ li.projects > ul {
 .app-wrapper.fixed-header .sticky-header .actions .btn {
   background-color: #d2d2d2;
 }
+.app-wrapper.fixed-header .sticky-header .actions .btn:hover {
+  background-color: #fff;
+}
 .header-space {
   height: 100px;
   padding-top: 40px;
